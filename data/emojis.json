@@ -1,0 +1,53 @@
+{
+    "emojis": [
+        {
+            "show": true,
+            "emoji": "🌝",
+            "use": "happy and hopeful, or looking forward to something",
+            "similar": [
+                "🤗"
+            ],
+            "ex": {
+                "message": "I wanna bring you coffee 🌝",
+                "date": "10/12/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😤",
+            "use": "triumph or superiority over something, similar to crossing arms or \"hah\"",
+            "ex": {
+                "message": "I guess we're competing 😤",
+                "date": "7/25/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😮‍💨",
+            "use": "when doing something effortless, i.e. \"piece of cake\"",
+            "ex": {
+                "message": "Of course 😮‍💨",
+                "date": "6/27/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😇",
+            "use": "saying something innocent, or used sarcastically when saying something not innocent or slightly evil",
+            "ex": {
+                "message": "Wish I could come over and prove it rn 😇",
+                "date": "9/17/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😶",
+            "use": "unsure about something, waiting for your reaction. i.e. \"oop\", sometimes expecting something negative"
+        },
+        {
+            "show": true,
+            "emoji": "😅",
+            "use": "relieved about something, or embarrassed/apolegetic. i.e. \"phew\""
+        }
+    ]
+}

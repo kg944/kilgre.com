@@ -2,18 +2,18 @@
 /*
  * ["annotations"]["annotations"]["😁"]["tts"]
  */
-
-// const source = document.getElementById('search-emoji');
-// const result = document.getElementById('result');
-
-// const inputHandler = function (e) {
-//   result.innerText = e.target.value;
-//   console.log(e.target.value);
-// };
+var searchedEmoji = '';
 
 $(document).ready(function () {
   //source.addEventListener('input', inputHandler);
   getEmojis();
+
+  $(':input').on('input', function (e) {
+    searchedEmoji = $(this).val();
+    // clear inner html of dictionary and filter by search
+    $('.dict').html('');
+    getEmojis();
+  });
 });
 
 /* Do a horizontal flip when you move the mouse over the flip box container */
@@ -27,48 +27,62 @@ function fciclick(i) {
   $('#fci-' + i).toggleClass('flipped');
 }
 
+function displayCard(i, val) {
+  if (val['show']) {
+    var color = randomColorInPalette();
+    var example = val['ex']['message']
+      ? '<p class="example-message"><i>' +
+        val['ex']['date'] +
+        ': </i>"' +
+        val['ex']['message'] +
+        '"</p>'
+      : '';
+    var cardEntry =
+      ' \
+                  <div onclick="fciclick(' +
+      i +
+      ')" class="flip-card grid-item"> \
+                      <div id="fci-' +
+      i +
+      '" class="flip-card-inner"> \
+                          <div class="flip-card-front"  style="background-color:' +
+      color +
+      ';"> \
+                              <h1 class="emoji-text">' +
+      val['emoji'] +
+      '</h1> \
+                          </div> \
+                          <div class="flip-card-back"><div class="emoji-content"> \
+                              <p class="emoji-use">' +
+      val['use'] +
+      '</p> ' +
+      example +
+      '</div></div> \
+                      </div> \
+                  </div> \
+              ';
+    $('.dict').append(cardEntry);
+  }
+}
+
 async function getEmojis() {
   const emojis = await fetch('../data/emojis.json').then((response) =>
     response.json(),
   );
-
-  $.each(emojis.emojis, function (i, val) {
-    if (val['show']) {
-      var color = randomColorInPalette();
-      var example = val['ex']['message']
-        ? '<p class="example-message"><i>' +
-          val['ex']['date'] +
-          ': </i>"' +
-          val['ex']['message'] +
-          '"</p>'
-        : '';
-      var cardEntry =
-        ' \
-                    <div onclick="fciclick(' +
-        i +
-        ')" class="flip-card grid-item"> \
-                        <div id="fci-' +
-        i +
-        '" class="flip-card-inner"> \
-                            <div class="flip-card-front"  style="background-color:' +
-        color +
-        ';"> \
-                                <h1 class="emoji-text">' +
-        val['emoji'] +
-        '</h1> \
-                            </div> \
-                            <div class="flip-card-back"><div class="emoji-content"> \
-                                <p class="emoji-use">' +
-        val['use'] +
-        '</p> ' +
-        example +
-        '</div></div> \
-                        </div> \
-                    </div> \
-                ';
-      $('.dict').append(cardEntry);
-    }
-  });
+  if (searchedEmoji) {
+    $.each(emojis.emojis, function (i, val) {
+      if (
+        searchedEmoji.indexOf(val['emoji']) >
+        -1 /* OR searchedEmoji in related[] */
+      ) {
+        displayCard(i, val);
+      }
+    });
+  } else {
+    $.each(emojis.emojis, function (i, val) {
+      displayCard(i, val);
+    });
+  }
 }
 
 /**

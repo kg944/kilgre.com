@@ -1,0 +1,117 @@
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 14em;
+  height: 8em;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+
+  border-radius: 16px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #576369;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.dict {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  gap: 1em;
+}
+
+.grid-item {
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  font-size: 2em;
+  text-align: center;
+}
+
+body {
+  background-color: #595959;
+  padding: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.emoji-text {
+  font-size: 120px;
+}
+
+.emoji-use {
+  font-size: 22px;
+  margin-bottom: 60px;
+}
+
+.example-message {
+  font-size: 16px;
+  color: #a3a3a3;
+}
+
+
+.emoji-content {
+  padding: 20px;
+}
+
+.dict-header, .dict-footer {
+  color: #2f2f2f;
+  margin: 0 65px 30px 65px;
+}
+
+/* background gradient */
+body {
+  background: linear-gradient(270deg, #b3b3b3, #5e5e5e, #8d8d8d);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

@@ -1,0 +1,148 @@
+{
+    "emojis": [
+        {
+            "show": true,
+            "emoji": "🌝",
+            "use": "happy and hopeful, or looking forward to something",
+            "ex": {
+                "message": "I wanna bring you coffee 🌝",
+                "date": "10/12/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😤",
+            "use": "triumph or superiority over something, similar to crossing arms or \"hah\"",
+            "ex": {
+                "message": "I guess we're competing 😤",
+                "date": "7/25/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😮‍💨",
+            "use": "when doing something effortless, i.e. \"piece of cake\"",
+            "ex": {
+                "message": "Of course 😮‍💨",
+                "date": "6/27/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😇",
+            "use": "saying something innocent, or used sarcastically when saying something not innocent or slightly evil",
+            "ex": {
+                "message": "Wish I could come over and prove it rn 😇",
+                "date": "9/17/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😶",
+            "use": "unsure about something, waiting for your reaction. i.e. \"oop\", sometimes expecting something negative",
+            "ex": {
+                "message": "Finally buying a keyboard 😶",
+                "date": "10/16/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😅",
+            "use": "relieved about something, or embarrassed/apolegetic. i.e. \"phew\"",
+            "ex": {
+                "message": "Me when you didn't even notice 😅",
+                "date": "6/27/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😁",
+            "use": "genuine happiness, excited for something",
+            "ex": {
+                "message": "Bowling with Bryan and Isaiah btw 😁😁",
+                "date": "11/25/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😳",
+            "use": "stunned / speechless, in awe of something",
+            "ex": {
+                "message": "I mean it's about to get a lot better 😳🎧",
+                "date": "9/17/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "🤝",
+            "use": "agreement, either genuine or sarcastic",
+            "ex": {
+                "message": "Nah just means we have good taste 🤝",
+                "date": "8/25/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "🤓",
+            "use": "acknowledgement that I said or did something nerdy/embarrassing",
+            "ex": {
+                "message": "It's a way to know what day of the week any date is 🤓",
+                "date": "8/10/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😎",
+            "use": "after saying or doing something cool, or if I beat you at something ;)",
+            "ex": {
+                "message": "Send him over to the better office, ours is still open 😎",
+                "date": "9/15/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "🤨",
+            "use": "judging you for something! or juding someone else, typically in a negative way. unapproving, disagreeing",
+            "ex": {
+                "message": "",
+                "date": ""
+            }
+        },
+        {
+            "show": false,
+            "emoji": "🤔",
+            "use": "confused or thinking about something, typically if I disagree with something you said or something doesn't make sense",
+            "ex": {
+                "message": "",
+                "date": ""
+            }
+        },
+        {
+            "show": true,
+            "emoji": "💀",
+            "use": "when something is funny but also worth grimacing at (\"oh boy\") alternatively something not good (\"yikes\")",
+            "ex": {
+                "message": "$100 prob 💀💀💀💀",
+                "date": "9/24/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "😛",
+            "use": "excited for something, but more eager for it than regularly happy (compared to \"😁\")",
+            "ex": {
+                "message": "I'm excited about everything 😛",
+                "date": "11/21/23"
+            }
+        },
+        {
+            "show": true,
+            "emoji": "🙃",
+            "use": "annoyed about something (or at myself), or embarrassed / feel bad about something, upset, used after a sarcastic remark",
+            "ex": {
+                "message": "That's the one that I had put in 'special place so I won't forget' then lost it 🙃 [..]",
+                "date": "11/26/23"
+            }
+        }
+    ]
+}

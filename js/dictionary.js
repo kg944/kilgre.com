@@ -16,6 +16,17 @@ $(document).ready(function () {
   getEmojis();
 });
 
+/* Do a horizontal flip when you move the mouse over the flip box container */
+function fciclick(i) {
+  var element = $('#fci-' + i);
+  if (element.hasClass('flipped')) {
+    $('#fci-' + i).css('transform', '');
+  } else {
+    $('#fci-' + i).css('transform', 'rotateY(180deg)');
+  }
+  $('#fci-' + i).toggleClass('flipped');
+}
+
 async function getEmojis() {
   const emojis = await fetch('../data/emojis.json').then((response) =>
     response.json(),
@@ -33,8 +44,12 @@ async function getEmojis() {
         : '';
       var cardEntry =
         ' \
-                    <div class="flip-card grid-item"> \
-                        <div class="flip-card-inner"> \
+                    <div onclick="fciclick(' +
+        i +
+        ')" class="flip-card grid-item"> \
+                        <div id="fci-' +
+        i +
+        '" class="flip-card-inner"> \
                             <div class="flip-card-front"  style="background-color:' +
         color +
         ';"> \

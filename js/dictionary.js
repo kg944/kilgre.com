@@ -3,16 +3,16 @@
  * ["annotations"]["annotations"]["😁"]["tts"]
  */
 
-const source = document.getElementById('source');
-const result = document.getElementById('result');
+// const source = document.getElementById('search-emoji');
+// const result = document.getElementById('result');
 
-const inputHandler = function (e) {
-  result.innerText = e.target.value;
-  console.log(e.target.value);
-};
+// const inputHandler = function (e) {
+//   result.innerText = e.target.value;
+//   console.log(e.target.value);
+// };
 
 $(document).ready(function () {
-  source.addEventListener('input', inputHandler);
+  //source.addEventListener('input', inputHandler);
   getEmojis();
 });
 
@@ -20,33 +20,38 @@ async function getEmojis() {
   const emojis = await fetch('../data/emojis.json').then((response) =>
     response.json(),
   );
-  console.log('emojis');
-  console.log(emojis.emojis);
-  console.log($('#search-emoji').val());
 
   $.each(emojis.emojis, function (i, val) {
     if (val['show']) {
-      var color = randomColor();
-      $('.dict').append(
+      var color = randomColorInPalette();
+      var example = val['ex']['message']
+        ? '<p class="example-message"><i>' +
+          val['ex']['date'] +
+          ': </i>"' +
+          val['ex']['message'] +
+          '"</p>'
+        : '';
+      var cardEntry =
         ' \
-                    <div class="flip-card grid-item" style="background-color:' +
-          color +
-          ';"> \
+                    <div class="flip-card grid-item"> \
                         <div class="flip-card-inner"> \
-                            <div class="flip-card-front"> \
-                                <h1>' +
-          val['emoji'] +
-          '</h1> \
+                            <div class="flip-card-front"  style="background-color:' +
+        color +
+        ';"> \
+                                <h1 class="emoji-text">' +
+        val['emoji'] +
+        '</h1> \
                             </div> \
-                            <div class="flip-card-back"> \
-                                <p>' +
-          val['use'] +
-          '</p> \
-                            </div> \
+                            <div class="flip-card-back"><div class="emoji-content"> \
+                                <p class="emoji-use">' +
+        val['use'] +
+        '</p> ' +
+        example +
+        '</div></div> \
                         </div> \
                     </div> \
-                ',
-      );
+                ';
+      $('.dict').append(cardEntry);
     }
   });
 }
@@ -60,6 +65,21 @@ function randomColor() {
     h = (Math.random() * 0.3 + 0.099) * 360,
     rgb = hsvToRgb(h, 40, 75);
   return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+}
+
+/**
+ *
+ */
+function randomColorInPalette() {
+  var colors = [
+    '#CFE0EB',
+    '#C0D4E1',
+    '#A6C3E4',
+    '#93B9DD',
+    '#8BADD3',
+    '#78A3D4',
+  ];
+  return colors[parseInt(Math.random() * colors.length)];
 }
 
 /**

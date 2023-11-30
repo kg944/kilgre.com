@@ -55,7 +55,6 @@
 }
 
 .grid-item {
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   font-size: 2em;
   text-align: center;
 }
@@ -79,14 +78,13 @@ body {
   color: #a3a3a3;
 }
 
-
 .emoji-content {
   padding: 20px;
 }
 
 .dict-header, .dict-footer {
   color: #2f2f2f;
-  margin: 0 65px 30px 65px;
+  margin: 0 1em 2em 1em;
 }
 
 /* background gradient */

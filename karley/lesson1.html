@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Lesson 1</title>
+  </head>
+  <body>
+      <h1>Lesson 1: Basics</h1>
+      <h2>First assignment</h2>
+      <p>My laptop battery is dying so I'm going to write some short things down here but clean it up and expand upon it later. As a refresher, our next project is to make a guessing game! In a sentence, this program will generate a random number, and accept guesses from the user until they have guessed the correct number, telling the user if their guess is too high or too low after every guess. To break it down more into more easily programmable steps:</p>
+      <ol>
+          <li>Generate a random number</li>
+          <li>Ask for the user's first guess</li>
+          <li>While the user has not yet guessed our number, ask the user for a new guess.</li>
+          <li>If this is the correct number, print success and stop the program!</li>
+          <li>Otherwise if their guess is too high print "too high" or if too low print "too low".</li>
+          <li>Repeat from step 3 until success!</li>
+      </ol>
+      <h3>Starter code</h3>
+      <p>Here is the starter code to get you going for the guessing game. This will generate a random number and store it to the variable. Your next steps are items 2 through 6 from above - I don't want to give too much away because I think with some trial and error you can get it yourself :)</p>
+      <p><pre>
+      import random
+      # generate a random number between 0 and 100 (can be 0, cannot be 100)
+      random_number = random.randint(0, 100)
+      </pre>
+      </p>
+      <h2>Refreshers</h2>
+      <small>are you wearing your hawaiian shirt?</small>
+      <h3>Input</h3>
+      <p>Accepting user input can be done with the <code>input()</code> function. We can set the return of this function equal to a variable in order to store the user input for later use. An example:</p>
+      <p><code>user_name = input("enter your name: ")</code></p>
+      <p>The above code will prompt the user for their name, and store it to variable <code>user_name</code></p>
+      <h3>For loops</h3>
+      <p>For loops are useful to do something a set number of times, when we know ahead of times exactly how many iterations we want. They are also useful for looping over arrays, and when we want to know what iteration of the loop we are on (think printing something like "item 1: blah bla", "item 2: blah blah" where 1 and 2 are 'i' in our loop. Example of a simple for loop:</p>
+      <p>
+        <pre>
+        for i in range(0, 5):
+            print(i)
+        </pre>
+      </p>
+      <h3>While loops</h3>
+      <p>While loops are useful for continuing to loop <i>while</i> a condition is still true. Reminder: a <b>condition</b> is a true or false statement, for example <code>x &lt; 10</code> or </code>user_input != "quit"</code>. An example of a simple while loop:</p>
+      <p><pre>
+      while count &lt; 10:
+          print("count is less than 10!")
+          count += 1
+      </pre>
+      </p>
+      <h3>If statements</h3>
+      <p>If statements are used to test a condition, and perform some logic if it is true. You can add "else if"s and "else"s after the if statements to tell the computer to check another condition if the first is false, or to do something if the above statement is false respectively. That was probably a bad way to word it but you're smart. Example of if statements:</p>
+      <p>
+      <pre>
+        if age &gt;= 21:
+            print("you can drink")
+        else if age &gt;= 18:
+            print("you can vote")
+        else if age == 15:
+            print("you are exactly 15 years old")
+        else:
+            print("ur a lil baby wah wah also you're not 15")
+        </pre>
+      </p>
+  </body>
+</html>
